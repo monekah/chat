@@ -1,0 +1,41 @@
+
+import gpt_4
+
+def chat(user_input):
+  """
+  This function takes a user's input and returns a response from the GPT-4 language model.
+
+  Args:
+    user_input: The user's input.
+
+  Returns:
+    The response from the GPT-4 language model.
+  """
+
+  # Convert the user's input to a string.
+  user_input = str(user_input)
+
+  # Generate a response from the GPT-4 language model.
+  response = gpt_4.generate(user_input, max_length=200)
+
+  # Return the response.
+  return response
+
+def main():
+  """
+  This function starts the ChatGPT chatbot.	
+  """
+
+  # Get the user's input.
+  user_input = input("What would you like to talk about? ")
+
+  # Generate a response from the GPT-4 language model.
+  response = chat(user_input)
+
+  # Print the response.
+  print(response)
+
+if __name__ == "__main__":
+  main()
+
+
